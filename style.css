@@ -1,0 +1,501 @@
+/* General  Rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 100px 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:382px) {
+    body {
+        margin: 0;
+        width: calc(100% + 80px);
+    }
+
+    * {
+        padding-left: auto;
+        padding-right: auto;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 748px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 972px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1180px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .srv {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width:1199px) {
+
+    body>div.services>div>div>div:nth-child(3) {
+        display: none;
+    }
+}
+
+.special-heading,
+.special-paragraph {
+    margin: 0;
+    text-align: center;
+    line-height: 0.7;
+}
+
+.special-paragraph {
+    font-size: 12px;
+    padding-bottom: 75px;
+}
+
+.special-heading {
+    font-size: 55px;
+    font-weight: 800;
+    color: #7f8387;
+}
+
+/* End or general rules */
+
+/* Start Of Header */
+header {
+    color: white;
+}
+
+header .container {
+    color: white;
+    height: auto;
+    place-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header .container .logo {
+    width: 80px;
+}
+
+header .container .logo img {
+    width: 100%;
+}
+
+header .container .icon {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+header .container .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+header .container .links:hover .arrow,
+header .container .links:hover ul {
+    display: block;
+}
+
+header .container .icon span:nth-child(2) {
+    width: 15px;
+    transition: 0.3s width;
+}
+
+header .container .icon span {
+    width: 30px;
+    height: 2px;
+    margin-bottom: 5px;
+    background-color: #333;
+}
+
+header .container .links {
+    position: relative;
+}
+
+header .container .links ul {
+    position: absolute;
+    background-color: #f6f7f7;
+    right: 0px;
+    top: 20px;
+    padding: 0;
+    width: 200px;
+    list-style: none;
+    display: none;
+}
+
+header .container .links ul li {
+    transition: 0.3s padding;
+    padding: 15px;
+}
+
+header .container .links ul li:hover {
+    padding-left: 30px;
+}
+
+header .links .arrow {
+    border-color: transparent transparent #f6f7f7 transparent;
+    border-width: 15px;
+    border-style: solid;
+    position: absolute;
+    right: 3px;
+    top: 6px;
+    display: none;
+}
+
+
+header .container .links ul li:not(:last-child) {
+    border-bottom: 1px solid #dcdcdd;
+}
+
+header .container .links ul a {
+    text-decoration: none;
+    color: black;
+}
+
+/* End Of Header */
+
+/* Landing Section  */
+.landing {
+    background-image: url(images/landing.jpg);
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.landing .text {
+    width: 320px;
+    text-align: center;
+    width: 100%;
+}
+
+.landing .container .text h3 {
+    font-size: 55px;
+}
+
+.landing .container .text p {
+    font-size: 19px;
+}
+
+/* End Of Landing Section  */
+
+/* Start Of Features  */
+.features {
+    padding: 100px 0;
+}
+
+.features .container i {
+    color: #31cebe;
+}
+
+.features .container {
+    display: grid;
+    gap: 2%;
+    place-content: center center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+
+.features .container .feat {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.features .features .container .feat p {
+    line-height: 1.8;
+}
+
+/* End Of Features  */
+
+/* Start Of Services  */
+
+.services {
+    background-color: rgb(223, 217, 217);
+}
+
+.services-content {
+    display: grid;
+    place-content: center;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2%;
+}
+
+.text h3 {
+    margin: 0;
+}
+
+.srv {
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.srv p {
+    margin: 0;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.srv i {
+    flex-basis: 60px;
+    height: 60px;
+}
+
+.srv .text {
+    flex: 1;
+    padding-bottom: 70px;
+}
+
+.image {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    height: auto;
+}
+
+.image img {
+    width: 250px;
+    height: 100%;
+}
+
+body>div.services>div>div>div:nth-child(3) {
+    position: relative;
+}
+
+.image::before {
+    content: "";
+    background-color: #2c4755;
+    width: 100px;
+    height: 480px;
+    top: -90px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+/* End Of Services  */
+
+/* Start Of Portfolio  */
+.portfolio {
+    background-color: #f6f6f6;
+}
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    background-color: rgb(255, 255, 255);
+}
+
+.card>.info>h3,
+.card>.info>p {
+    padding: 0 12px 0;
+    text-align: left;
+}
+
+/* End Of Portfolio  */
+
+/* Start of About-us  */
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.about-us-content .col {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 100px;
+    width: auto;
+    padding-left: 35%;
+}
+
+.about-us-content .about-image img {
+    width: 250px;
+    height: 375px;
+}
+
+.about-us .about-us-content .about-image {
+    position: relative;
+    width: 250px;
+}
+
+.about-us .about-us-content .about-image::before {
+    content: "";
+    position: absolute;
+    background-color: #f6f6f6;
+    width: 100px;
+    height: calc(100% + 40px);
+    top: -40px;
+    height: 480px;
+    left: 0;
+    z-index: -1;
+}
+
+.about-us .about-us-content .about-image::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    right: -230px;
+    border-left: 80px solid #10cab7;
+    border-bottom: 80px solid #10cab7;
+    top: -40px;
+    z-index: -1;
+}
+
+@media (max-width:991px) {
+
+    .about-us .about-us-content .about-image::after,
+    .about-us .about-us-content .about-image::before {
+        display: none;
+    }
+
+    .about-us .about-us-content .about-image {
+        padding: 0;
+    }
+
+    .about-us .about-us-content .col {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-left: 100px;
+    }
+
+    body>div.about-us>div>div>div.col>p {
+        line-height: 1.8;
+    }
+
+    .about-us .about-us-content {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* End of About-us  */
+
+/* Start Of Contact  */
+.contact {
+    background-color: #f6f6f6;
+}
+
+.contact-col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
+.contact-col h3 {
+    padding: 0;
+    margin: 0;
+    white-space: normal;
+}
+
+.contact-col i {
+    font-size: 10px;
+    color: #2c4755;
+}
+
+.contact-col h3:first-of-type {
+    font-size: 40px;
+    color: #2c4755;
+}
+
+.contact-col h3:last-of-type {
+    font-size: 36px;
+    color: #10cab7;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-direction: wrap;
+    gap: 12px;
+}
+
+
+/* End Of Contact  */
+
+/* Start Of Footer  */
+.footer {
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    height: 100px;
+    background-color: #2c4755;
+    color: white;
+    gap: 0.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer span {
+    color: #10cab7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* End Of Footer  */
